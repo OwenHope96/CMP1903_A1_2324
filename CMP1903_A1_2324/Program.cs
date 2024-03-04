@@ -15,6 +15,8 @@ namespace CMP1903_A1_2324
              * Create a Testing object to verify the output and operation of the other classes.
              */
 
+            Testing Test = new Testing();
+
             Game Game1 = new Game();
             int Total = 0;
             string Choice = "n";
@@ -24,11 +26,14 @@ namespace CMP1903_A1_2324
                 Choice = Console.ReadLine();
                 if (Choice == "y")
                 {
-                    Total += Game1.Play();
-                    Console.WriteLine("The 3 dice rolled a total of " + Total);
+                    
+                    int NewAdd = Game1.Play();
+                    Total += NewAdd;
+                    Console.WriteLine("The 3 dice rolled a total of " + NewAdd+ ". Adding this to previous rolls = " + Total);
                     Console.ReadLine();
 
                 }
+                Choice = "n";
             }
         }
     }

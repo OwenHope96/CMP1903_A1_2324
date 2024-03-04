@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,5 +17,15 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+
+        public Testing()
+            {
+                Game Game1 = new Game();
+                Die Die1 = new Die();
+                Die1.RollDie();
+
+                Debug.Assert((Die1.GSNumber <= 6) && (Die1.GSNumber >= 1), "Die rolled outside of range");
+                Debug.Assert((Game1.Play() <= 18) && (Game1.Play() >= 3), "Total was outside of range");
+            }
     }
 }

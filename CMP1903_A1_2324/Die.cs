@@ -17,16 +17,21 @@ namespace CMP1903_A1_2324
 
         //Property
         private int Number = 0;
-
+        static Random R = new Random();
 
         //Method
         public int RollDie()
         {
-            Random r = new Random();
-            Number = r.Next(1,7);
-            return Number;
+            
+            Number = R.Next(1,7);
+            return 0;
         }
 
+        public int GSNumber
+        {
+            get { return Number; }
+            set { Number = value; }
+        }
 
     }
 }
