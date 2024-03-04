@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,9 +16,16 @@ namespace CMP1903_A1_2324
          */
 
         //Property
+        private int Number = 0;
 
 
         //Method
+        public int RollDie()
+        {
+            Random r = new Random();
+            Number = r.Next(1,7);
+            return Number;
+        }
 
 
     }

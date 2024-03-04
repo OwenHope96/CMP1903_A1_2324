@@ -15,7 +15,23 @@ namespace CMP1903_A1_2324
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
 
+        private int LoopNum = 1;
         //Methods
 
+        public Game(int NumOfLoops = 1) 
+        {
+            LoopNum = NumOfLoops;
+            
+        }
+        public int Play()
+        {
+            Die Dice1 = new Die();
+            int Sum = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                Sum += Dice1.RollDie();
+            }
+            return Sum;
+        }
     }
 }
