@@ -24,6 +24,8 @@ namespace CMP1903_A1_2324
                 Die Die1 = new Die();
                 Die1.RollDie();
 
+                // Checks to see if Dice are rolled out of range and the game adds them up correctly.
+
                 Debug.Assert((Die1.GSNumber <= 6) && (Die1.GSNumber >= 1), "Die rolled outside of range");
                 Debug.Assert((Game1.Play() <= 18) && (Game1.Play() >= 3), "Total was outside of range");
             }

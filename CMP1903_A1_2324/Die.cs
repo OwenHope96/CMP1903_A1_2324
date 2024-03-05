@@ -22,10 +22,13 @@ namespace CMP1903_A1_2324
         //Method
         public int RollDie()
         {
+            // Random function generates a number from 1 to 6
             
             Number = R.Next(1,7);
             return 0;
         }
+
+        // Getter/Setter for the Number
 
         public int GSNumber
         {

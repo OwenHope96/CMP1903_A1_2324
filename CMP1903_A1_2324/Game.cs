@@ -23,16 +23,22 @@ namespace CMP1903_A1_2324
         }
         public int Play()
         {
+            // 3 Die class instantiated 
             Die Dice1 = new Die();
             Die Dice2 = new Die();
             Die Dice3 = new Die();
 
+            // All 3 Die class are rolled
 
             Dice1.RollDie();
             Dice2.RollDie();
             Dice3.RollDie();
 
+            // Added the values of the Die
+
             int sum = (Dice1.GSNumber + Dice2.GSNumber + Dice3.GSNumber);
+
+            // Returns the total of the 3 Die
 
             return sum;
         }
