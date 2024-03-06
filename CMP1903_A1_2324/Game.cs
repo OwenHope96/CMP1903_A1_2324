@@ -17,5 +17,29 @@ namespace CMP1903_A1_2324
 
         //Methods
 
+        public Game() {
+            
+        }
+        public int Play() {
+
+            // 3 Die class instantiated 
+            Die dice1 = new Die();
+            Die dice2 = new Die();
+            Die dice3 = new Die();
+
+            // All 3 Die class are rolled
+
+            Console.WriteLine("Dice roll 1 = " + dice1.RollDie());
+            Console.WriteLine("Dice roll 2 = " + dice2.RollDie());
+            Console.WriteLine("Dice roll 3 = " + dice3.RollDie());
+
+            // Added the values of the Die
+
+            int sum = (dice1.gsNumber + dice2.gsNumber + dice3.gsNumber);
+
+            // Returns the total of the 3 Die
+
+            return sum;
+        }
     }
 }
