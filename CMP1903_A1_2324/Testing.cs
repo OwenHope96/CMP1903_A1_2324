@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Testing
-    {
+    internal class Testing {
         /*
          * This class should test the Game and the Die class.
          * Create a Game object, call the methods and compare their output to expected output.
@@ -18,16 +17,16 @@ namespace CMP1903_A1_2324
 
         //Method
 
-        public Testing()
-            {
+        public Testing() {
                 Game Game1 = new Game();
                 Die Die1 = new Die();
                 Die1.RollDie();
+                int Value = Game1.Play();
 
                 // Checks to see if Dice are rolled out of range and the game adds them up correctly.
 
-                Debug.Assert((Die1.GSNumber <= 6) && (Die1.GSNumber >= 1), "Die rolled outside of range");
-                Debug.Assert((Game1.Play() <= 18) && (Game1.Play() >= 3), "Total was outside of range");
+                Debug.Assert((Die1.gsNumber <= 6) && (Die1.gsNumber >= 1), "Die rolled outside of range");
+                Debug.Assert((Value <= 18) && (Value >= 3), "Total was outside of range");
             }
     }
 }
